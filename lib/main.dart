@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_with_supabase/pages/account_page.dart';
 import 'package:flutter_with_supabase/pages/login_page.dart';
 import 'package:flutter_with_supabase/pages/splash_page.dart';
+import 'package:flutter_with_supabase/utils/storage_key.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
   await Supabase.initialize(
-    url: 'https://pxqqkrsyoqfhrdeouwwj.supabase.co',
-    anonKey:
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB4cXFrcnN5b3FmaHJkZW91d3dqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY0MTAxMjYsImV4cCI6MjAxMTk4NjEyNn0.EvRD0tQfsjKS5srD8ZKGWFcjkDghJp5nXCvcHjY1v30',
+    url: supabaseUrl,
+    anonKey: supabaseKey,
     authFlowType: AuthFlowType.pkce,
   );
 
